@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Login Test Application</string>
+    <string name="auth_menu_create_account_title">СОЗДАТЬ</string>
+    <string name="auth_activity_title">Авторизация</string>
+    <string name="auth_email_input_hint">Электронная почта</string>
+    <string name="auth_password_input_hint">Пароль</string>
+    <string name="auth_login_btn_text">ВОЙТИ</string>
 </resources>

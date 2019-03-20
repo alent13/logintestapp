@@ -2,10 +2,45 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+        <item name="actionMenuTextAppearance">@style/AppTheme.ActionMenuTextStyle</item>
+        <item name="actionMenuTextColor">@color/dark_sky_blue</item>
+        <item name="toolbarStyle">@style/AppTheme.Toolbar</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/AppTheme.ToolbarTitleStyle</item>
+        <item name="actionButtonStyle">@style/AppTheme.ActionMenuTextStyle</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="theme">@style/ToolbarTheme</item>
+    </style>
+
+    <style name="ToolbarTheme">
+        <item name="colorControlNormal">@color/dark_sky_blue</item>
+    </style>
+
+    <style name="AppTheme.ToolbarTitleStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/greyish_brown</item>
+    </style>
+
+    <style name="AppTheme.ActionMenuTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:lineSpacingExtra">13sp</item>
+        <item name="android:lineHeight">28sp</item>
+    </style>
+
+    <style name="AppTheme.AuthButton" parent="Base.TextAppearance.AppCompat.Button" >
+        <item name="backgroundTint">@color/tangerine</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>
