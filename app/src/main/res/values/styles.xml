@@ -35,12 +35,12 @@
         <item name="android:textSize">15sp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:lineSpacingExtra">13sp</item>
-        <item name="android:lineHeight">28sp</item>
     </style>
 
     <style name="AppTheme.AuthButton" parent="Base.TextAppearance.AppCompat.Button" >
         <item name="backgroundTint">@color/tangerine</item>
         <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
 </resources>

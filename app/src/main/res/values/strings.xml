@@ -5,4 +5,8 @@
     <string name="auth_email_input_hint">Электронная почта</string>
     <string name="auth_password_input_hint">Пароль</string>
     <string name="auth_login_btn_text">ВОЙТИ</string>
+    <string name="auth_error_invalid_email">Введите корректный адрес электронной почты.</string>
+    <string name="auth_error_password_not_strong_enough">Пароль недостаточно надежен. Попробуйте сочетание строчных, заглавных букв и цифр.</string>
+    <string name="forget_password_dialog_title">Восстановление пароля</string>
+    <string name="forget_password_dialog_send">Отправить</string>
 </resources>
