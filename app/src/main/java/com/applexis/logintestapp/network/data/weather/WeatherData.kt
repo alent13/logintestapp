@@ -1,8 +1,5 @@
 package com.applexis.logintestapp.network.data.weather
 
-/**
- * @author applexis
- */
 class WeatherData (
     var name: String,
     var code: Int,

@@ -2,10 +2,6 @@ package com.applexis.logintestapp
 
 import android.util.Patterns
 
-/**
- * @author applexis
- */
-
 fun String.isValidEmail(): Boolean = Patterns.EMAIL_ADDRESS.matcher(this).matches()
 
 fun String.isPasswordStrong(): Boolean =
