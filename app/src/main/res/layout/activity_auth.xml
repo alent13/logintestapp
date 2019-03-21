@@ -9,7 +9,7 @@
         android:id="@+id/authRootView"
         android:background="@android:color/white"
         >
-    
+
     <ProgressBar
             android:id="@+id/authLoginProgressBar"
             android:layout_width="0dp"

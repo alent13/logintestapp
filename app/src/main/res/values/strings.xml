@@ -1,12 +1,23 @@
 <resources>
     <string name="app_name">Login Test Application</string>
-    <string name="auth_menu_create_account_title">СОЗДАТЬ</string>
+
+    <!-- openweathermap api key -->
+    <string name="openweathermap_api_key">4f8b503c06603e5c9e0e0d2fce08175e</string>
+
+    <!-- Auth activity -->
     <string name="auth_activity_title">Авторизация</string>
     <string name="auth_email_input_hint">Электронная почта</string>
     <string name="auth_password_input_hint">Пароль</string>
     <string name="auth_login_btn_text">ВОЙТИ</string>
+    <string name="auth_menu_create_account_title">СОЗДАТЬ</string>
     <string name="auth_error_invalid_email">Введите корректный адрес электронной почты.</string>
     <string name="auth_error_password_not_strong_enough">Пароль недостаточно надежен. Попробуйте сочетание строчных, заглавных букв и цифр.</string>
+    <string name="auth_location_rationale">Нам необходимо знать ваше местоположение, чтобы отобразить погодные условия в вашем городе.</string>
+
+    <!-- Weather info -->
+    <string name="weather_info">Погода в %1$s:\n%2$.0f °C, %3$s\nВлажность: %4$d%%, давление: %5$.2f мм рт.ст.</string>
+
+    <!-- Forget password -->
     <string name="forget_password_dialog_title">Восстановление пароля</string>
     <string name="forget_password_dialog_send">Отправить</string>
 </resources>
