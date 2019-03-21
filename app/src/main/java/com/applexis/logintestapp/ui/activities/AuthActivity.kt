@@ -15,7 +15,9 @@ import android.view.*
 import com.applexis.logintestapp.isPasswordStrong
 import com.applexis.logintestapp.isValidEmail
 import android.view.View.OnTouchListener
+import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -64,11 +66,7 @@ class AuthActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
         authBtn.setOnClickListener {
-            val email = authEmailInput.text.toString().trim()
-            val password = authPasswordInput.text.toString()
-            if (isUserInputValid(email, password)) {
-                checkLocationPermission()
-            }
+            authenticate()
         }
 
         // обработка клика на иконку (?) - восстановление пароля
@@ -86,6 +84,14 @@ class AuthActivity : AppCompatActivity() {
             false
         })
 
+        authPasswordInput.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                authenticate()
+                return@setOnEditorActionListener true
+            }
+            false
+        }
+
         // при увеличении количества запросов и активити необходимо перенести логику в отдельный класс и реализовать
         // доступ к этому классу, например с использованием DI
         val retrofit = Retrofit.Builder()
@@ -95,6 +101,14 @@ class AuthActivity : AppCompatActivity() {
         weatherAPI = retrofit.create(WeatherAPI::class.java)
 
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+    }
+
+    private fun authenticate() {
+        val email = authEmailInput.text.toString().trim()
+        val password = authPasswordInput.text.toString()
+        if (isUserInputValid(email, password)) {
+            checkLocationPermission()
+        }
     }
 
     private fun checkLocationPermission() {
@@ -179,7 +193,7 @@ class AuthActivity : AppCompatActivity() {
     }
 
     private fun hideKeyboardFrom() {
-        val imm = getSystemService (Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(authRootView.windowToken, 0)
     }
 
